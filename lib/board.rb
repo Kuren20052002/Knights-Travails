@@ -7,8 +7,8 @@ class Board
 
   def display
     @board.reverse.each_with_index do |row, row_idx|
-      print "#{row_idx}  "
-      row.each_with_index do |square, square_idx|
+      print "#{8 - row_idx}  "
+      row.each do |square|
         print "[#{square}] "
       end
       puts "\n\n"
